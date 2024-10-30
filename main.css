@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background: linear-gradient(90deg, rgba(15, 93, 149, 1) 0%, rgba(52, 123, 173, 1) 0%, rgba(23, 126, 149, 1) 55%, rgba(28, 87, 101, 1) 92%, rgba(28, 87, 101, 1) 100%);
+};
+.display::placeholder{
+    top: 25%;
+    position: absolute;
+    font-size: 0.9rem;
+    font-family:'josefin',sans-serif;
+    text-transform: uppercase;
+}
+.display:focus{
+    outline: none;
+}
+.active{
+    opacity: 1;
+}
+.message{
+    transition: all 0.8s ease;
+}
+.check input:checked{
+    background-color: cyan;
+}
+.check input:checked::before{
+    content: "✓";
+    position: absolute;
+    font-size: 1.05rem;
+    color:rgb(18, 2, 55);
+    font-weight: 600;
+    left: 5%;
+    top: -10.5px;
+}
+.check label{
+    color: white;
+    letter-spacing: 0.75px;
+    font-size: 1.1rem;
+}
+.slider{
+    appearance: none;
+    width: 85%;
+    cursor: pointer;
+    background-color: rgb(18, 2, 55);
+    border-radius: 1rem;
+    margin-left: 1.35rem;
+    margin-top: 1rem;
+}
+.slider:focus{
+    outline: 3px solid rgb(130, 64, 217);
+}
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid cyan;
+    background-color: rgb(130, 64, 217);
+    box-shadow: 0px 0px 20px 2px rgba(15, 93, 149, 10);
+    border-radius: 50%;
+    transition: all 1ms ease-in;
+}
+.slider::-webkit-slider-thumb:hover{
+    background-color: cyan;
+    box-shadow: 0px 0px 20px 2px cyan;
+}
+.slider::-moz-range-thumb{
+    appearance: none;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border: 2px solid cyan;
+    background-color: rgb(130, 64, 217);
+    box-shadow: 0px 0px 20px 2px rgba(15, 93, 149, 10);
+    border-radius: 50%;
+    transition: all 1ms ease-in;
+
+}
+.slider::-moz-range-thumb:hover{
+    position: relative;
+    background-color: cyan;
+    box-shadow: 0px 0px 20px 2px cyan;
+}
