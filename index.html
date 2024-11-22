@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body class="flex justify-center items-center h-screen w-screen">
+    <div class="container w-[300px] flex flex-col items-center leading-8 ">
+        <h1 class="font-josefin text-3xl font-bold text-zinc-800 ">Password Generator</h1>
+        <div class="display-container mt-1 flex relative justify-between w-[320px] h-[50px] rounded-md border-b-2 border-b-purple-500 bg-blue-950 ">
+            <input readonly placeholder="Password" class="display absolute mt-2 bg-blue-950 text-green-100 text-lg- ml-2 w-[250px] " data-passwordDisplay>
+            <button data-copy class="absolute mt-2.5 right-3" >
+                <span data-copyMsg class="absolute -translate-y-8  text-md translate-x-4 text-white bg-slate-700 rounded-lg opacity-0 transition-transform message"></span>
+                <img src="copy.svg" alt="copy" width="23" height="23">
+            </button>
+        </div>
+        <div class="input-container bg-blue-950 m-2 w-[320px] h-[340px] rounded-md border-b-2 border-b-purple-500 leading-[2.1rem]">
+            <div class="length-container flex justify-between">
+                <p class="pl-6 text-gray-300 mt-2">Password Length</p>
+                <p data-lengthNumber class="pr-6 mt-2 text-gray-300">0</p>
+            </div>
+
+            <input type="range" min="0" max="20" class="slider" step="1" data-lengthSlider>  
+
+                <div class="check flex items-center mx-4 gap-x-4 gap-y-0 mt-1">
+                    <input type="checkbox" id="uppercase" class="appearance-none w-[15px] h-[15px] border-[1px] border-cyan-400 cursor-pointer rounded-[0.3rem] relative">
+                    <label for="uppercase">Includes Uppercase Letters</label>
+                </div>
+
+                <div class="check flex items-center mx-4 gap-x-4 gap-y-0 mt-1">
+                    <input type="checkbox" id="lowercase" class="appearance-none w-[15px] h-[15px] border-[1px] border-cyan-400 cursor-pointer rounded-[0.3rem] relative">
+                    <label for="lowercase">Includes Lowercase Letters</label>
+                </div>
+
+                <div class="check flex items-center mx-4 gap-x-4 gap-y-0 mt-1">
+                    <input type="checkbox" id="numbers" class="appearance-none w-[15px] h-[15px] border-[1px] border-cyan-400 cursor-pointer rounded-[0.3rem] relative">
+                    <label for="numbers">Includes Numbers</label>
+                </div>
+
+                <div class="check flex items-center mx-4 gap-x-4 gap-y-0 mt-1">
+                    <input type="checkbox" id="symbols" class="appearance-none w-[15px] h-[15px] border-[1px] border-cyan-400 cursor-pointer rounded-[0.3rem] relative">
+                    <label for="symbols">Includes Symbols</label>
+                </div>
+
+            <div class="strength-container flex justify-between mt-2">
+                <p class="ml-12 text-lg font-josefin text-gray-300">Strength</p>
+                <div data-indicator class="h-3 w-3 rounded-full shadow-custom bg-white self-center mr-12 mb-0.5"></div>
+            </div>
+
+            <button class="generateButton ml-14 mt-4 rounded-sm w-52 bg-slate-700 text-gray-300 border-b-2 border-b-black">
+                Generate Password
+            </button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
