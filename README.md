@@ -31,7 +31,7 @@ If you're hosting locally, use a live server (e.g., VS Code's "Go Live" extensio
 Go to your repository on GitHub.
 Click Settings > Pages.
 Set the source branch and save.
-Access your project at the provided GitHub Pages URL (e.g., https://yourusername.github.io/password-generator/)."""
+Access your project at the provided GitHub Pages URL : https://aryannn03.github.io/Password-Generator/)."""
 
 ## Usage :
 Visit the live link provided (e.g., via GitHub Pages).
